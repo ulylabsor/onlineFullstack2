@@ -1,57 +1,3 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.css">
-
-    <title>Syn-Express</title>
-
-    <!-- my css external -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/mobile.css">
-
-    <!-- my font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
-
-
-
-</head>
-
-<body>
-
-    <!-- header layanan kami -->
-    <section id="header-layanan-kami">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg navbar-white bg-nav">
-                    <div class="container">
-                        <a class="navbar-brand" href="#"><img src="./Assets/logo/logo syn cepat.png" alt="logo"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                            <div class="navbar-nav ">
-                                <a class="nav-link active" href="./index.html">Beranda <span
-                                        class="sr-only">(current)</span></a>
-                                <a class="nav-link" href="./layanan-kami.html">Layanan Kami</a>
-                                <a class="nav-link" href="./contact-us.html">Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </section>
-    <!-- akhir header -->
-
-
     <!-- banner -->
     <section id="banner-layanan-kami">
         <div class="row justify-content-center">
@@ -127,8 +73,8 @@
     </section>
     <!-- akhir banner -->
 
-      <!-- pilihan layanan -->
-      <section id="pilihan-layanan">
+    <!-- pilihan layanan -->
+    <section id="pilihan-layanan">
         <div class="container">
             <div class="row text-center justify-content-center a-banner">
                 <div class="col-lg-4 bg-layanan">
@@ -161,88 +107,3 @@
         </div>
     </section>
     <!-- akhir gambar -->
-
-
-    <!-- footer -->
-    <section id="footer-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <img src="./Assets/logo/logo syn cepat.png" alt="">
-                    <br>
-                    <br>
-                    <p>
-                        Apapun barang yang anda kirim jangan khawatir karena kami akan menjaga barang anda dengan baik
-                        dengan layanan cepat sampai aman & terpecaya
-                    </p>
-                </div>
-                <div class="col-lg-3">
-                    <h1>Perusahaan</h1>
-                    <p>
-                        Layanan Kami
-                    </p>
-                    <p>
-                        YES (Yakin Esok Sampai
-                    </p>
-                    <p>
-                        REG (Reguler)
-                    </p>
-                </div>
-                <div class="col-lg-3">
-                    <h1>KANTOR PUSAT
-                        Jl. Rajawali No. 11 Ilir Timur 11440 Indonesia</h1>
-                </div>
-            </div>
-            <hr style="border-color: wheat;">
-            <div class="row">
-                <p>
-                    Copyright &copy; 2020 - Syn-Cepat-express , All Right Reserved
-                </p>
-            </div>
-        </div>
-    </section>
-    <!-- akhir footer -->
-
-
-
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="./js/jquery.slim.min.js"></script>
-        <script src="./js/popper.min.js"></script>
-        <script src="./js/bootstrap.min.js"></script>
-         <!-- animation -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <script>
-
-        // banner
-        ScrollReveal().reveal('.a-banner', {
-            distance: '100px',
-            dellay: '1000',
-            origin: 'bottom',
-            duration: 2500,
-            opacity: 0.1, 
-        });
-
-
-        // kerjasama
-        ScrollReveal().reveal('.a-kerjasama', {
-            distance: '100px',
-            dellay: '900',
-            origin: 'left',
-            duration: 2500,
-            opacity: 0.1, 
-        });
-
-        ScrollReveal().reveal('.b-kerjasama', {
-            distance: '100px',
-            dellay: '900',
-            origin: 'right',
-            duration: 2500,
-            opacity: 0.1, 
-        });
-    </script>
-</body>
-
-</html>
