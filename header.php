@@ -10,7 +10,7 @@
                </button>
                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                   <div class="navbar-nav ">
-                     <a class="nav-link active" href="index.php">Beranda <span class="sr-only">(current)</span></a>
+                     <a class="nav-link" href="index.php">Beranda <span class="sr-only">(current)</span></a>
                      <a class="nav-link" href="?page=layanan">Layanan Kami</a>
                      <a class="nav-link" href="?page=contact">Contact Us</a>
                      <a class="nav-link" href="?page=login">Login</a>

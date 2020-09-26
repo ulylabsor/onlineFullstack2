@@ -11,6 +11,14 @@
          <div class="col-lg-6 text-center ">
             <div class="cek-biaya-yes">
                <h5>Gunakan username untuk login <br>
+                  <?php
+                  if (isset($_SESSION['notif'])) {
+                     echo $_SESSION['notif'];
+                  } else {
+                     '';
+                  }
+                  ?>
+
                </h5>
                <form action="?page=aksi-login" method="POST">
                   <p>
@@ -22,7 +30,7 @@
                   <div class="row text-center">
                      <div class="col-lg-12">
                         <p>
-                           <button type="submit" class="btn btn-warning">Login </button>
+                           <button type="submit" name="login" class="btn btn-warning">Login </button>
                         </p>
                      </div>
                   </div>
