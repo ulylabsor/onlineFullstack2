@@ -13,8 +13,19 @@
                      <a class="nav-link" href="index.php">Beranda <span class="sr-only">(current)</span></a>
                      <a class="nav-link" href="?page=layanan">Layanan Kami</a>
                      <a class="nav-link" href="?page=contact">Contact Us</a>
-                     <a class="nav-link" href="?page=login">Login</a>
-                     <a class="nav-link" href="?page=register">Register</a>
+
+                     <?php
+                     if (empty($_SESSION['IdUser'])) {
+                        //SEBELUM LOGIN
+                        echo '<a class="nav-link" href="?page=login">Login</a>';
+                        echo '<a class="nav-link" href="?page=register">Register</a>';
+                     } else {
+                        //SETELAH LOGIN
+                        echo '<a class="nav-link" href="#">' . $_SESSION['Username'] . '</a>';
+                        echo '<a class="nav-link" href="?page=logout">Logout</a>';
+                     }
+                     ?>
+
                   </div>
                </div>
             </div>

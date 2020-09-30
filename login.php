@@ -11,14 +11,7 @@
          <div class="col-lg-6 text-center ">
             <div class="cek-biaya-yes">
                <h5>Gunakan username untuk login <br>
-                  <?php
-                  if (isset($_SESSION['notif'])) {
-                     echo $_SESSION['notif'];
-                  } else {
-                     '';
-                  }
-                  ?>
-
+                  <?php tampilNotif() ?>
                </h5>
                <form action="?page=aksi-login" method="POST">
                   <p>
@@ -26,6 +19,9 @@
                   </p>
                   <p>
                      <input class="form-control" name="password" type="text" placeholder="Password">
+                  </p>
+                  <p>
+                     <input name="rememberme" type="checkbox" id="rememberme"> <label for="rememberme">Remember me</label>
                   </p>
                   <div class="row text-center">
                      <div class="col-lg-12">
