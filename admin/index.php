@@ -7,7 +7,7 @@ include '../koneksi/helper.php';
 include '../model/get-fungsi.php';
 include 'model/m_users.php';
 
-
+adminRestrictedPage();
 ?>
 <!doctype html>
 <html lang="en">

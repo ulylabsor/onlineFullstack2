@@ -22,7 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          $_SESSION['Updated_at'] = $dataUsers['updated_at'];
          $_SESSION['Login_at']   = $dataUsers['login_at'];
 
-         header("Location: index.php");
+         if ($_SESSION['Level'] == 'admin') {
+            header("Location: admin");
+         } else {
+            header("Location: index.php");
+         }
       } else if ($cekLogin == 'salahUsername') {
          notif('Username yang anda inputkan salah', 'danger');
          header("Location: ?page=login");

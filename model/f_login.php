@@ -22,3 +22,14 @@ function cekLogin($user, $pass)
       return 'salahUsername';
    }
 }
+
+function adminRestrictedPage()
+{
+   if (empty($_SESSION['Level'])) {
+      header("Location: ../index.php");
+   } else {
+      if ($_SESSION['Level'] <> 'admin') {
+         header("Location: ../index.php");
+      }
+   }
+}

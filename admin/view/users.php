@@ -26,8 +26,9 @@
             <td><?= $data['status'] == 'Y' ? 'Aktif' : 'Tidak Aktif' ?></td>
             <td><?= $data['login_at'] ?></td>
             <td>
-               <a href="#" title="Ubah data"><i class="fa fa-edit text-info"></i></a> &nbsp;
-               <a href="#" title="Hapus data"><i class="fa fa-trash text-danger"></i></a>
+               <a href="?page=edit-users&id=<?= $data['id_user'] ?>" title="Ubah data"><i class="fa fa-edit text-info"></i></a> &nbsp;
+
+               <a href="?page=aksi-users&delete=one&id=<?= $data['id_user'] ?>" title="Hapus data" onclick="return confirm('Yakin ingin menghapus data ? ')"><i class="fa fa-trash text-danger"></i></a>
             </td>
          </tr>
       <?php endforeach ?>
