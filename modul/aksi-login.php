@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       $cekLogin = cekLogin($username, $password);
       $dataUsers = getUsersByUsername($username);
-
+      
       if ($cekLogin == 'ok') { //LOGIN BERHASIL
          //BUAT COOKIE
          if ($_POST['rememberme'] == 'on') {
