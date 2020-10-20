@@ -25,50 +25,50 @@
                         <div class="carousel-item">
                             <div class="container">
                                 <div class="row justify-content-center">
-                                    <div class="col-lg-5 a-kerjasama">
-                                        <h1>Kirim Barang Tanpa Khawatir</h1>
-                                        <p>
-                                            Apapun barang yang anda kirim jangan khawatir karena kami akan menjaga
-                                            barang
-                                            anda dengan baik dengan layanan cepat sampai aman & terpecaya
-                                        </p>
-                                        <button type="button" class="btn btn-outline-light">Pilih Layanan</button>
-                                    </div>
-                                    <div class="col-lg-5 b-kerjasama">
-                                        <img class="img-banner" src="./Assets/img/o-service.png" alt="banner">
-                                    </div>
+                                    <div class="col-lg-5 a-kerjasama"></div>
+                                    <h1>Kirim Barang Tanpa Khawatir</h1>
+                                    <p>
+                                        Apapun barang yang anda kirim jangan khawatir karena kami akan menjaga
+                                        barang
+                                        anda dengan baik dengan layanan cepat sampai aman & terpecaya
+                                    </p>
+                                    <button type="button" class="btn btn-outline-light">Pilih Layanan</button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-5">
-                                        <h1>Kirim Barang Tanpa Khawatir</h1>
-                                        <p>
-                                            Apapun barang yang anda kirim jangan khawatir karena kami akan menjaga
-                                            barang
-                                            anda dengan baik dengan layanan cepat sampai aman & terpecaya
-                                        </p>
-                                        <button type="button" class="btn btn-outline-light">Pilih Layanan</button>
-                                    </div>
-                                    <div class="col-lg-5">
-                                        <img class="img-banner" src="./Assets/img/o-service.png" alt="banner">
-                                    </div>
+                                <div class="col-lg-5 b-kerjasama">
+                                    <img class="img-banner" src="./Assets/img/o-service.png" alt="banner">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-5">
+                                    <h1>Kirim Barang Tanpa Khawatir</h1>
+                                    <p>
+                                        Apapun barang yang anda kirim jangan khawatir karena kami akan menjaga
+                                        barang
+                                        anda dengan baik dengan layanan cepat sampai aman & terpecaya
+                                    </p>
+                                    <button type="button" class="btn btn-outline-light">Pilih Layanan</button>
+                                </div>
+                                <div class="col-lg-5">
+                                    <img class="img-banner" src="./Assets/img/o-service.png" alt="banner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+        </div>
         </div>
     </section>
     <!-- akhir banner -->
@@ -77,19 +77,14 @@
     <section id="pilihan-layanan">
         <div class="container">
             <div class="row text-center justify-content-center a-banner">
-                <div class="col-lg-4 bg-layanan">
-                    <img src="./Assets/icon/car-1.png" alt="">
-                    <h1>YES</h1>
-                    <p>YES adalah layanan dengan waktu penyampaian di tujuan keesokan hari (termasuk Minggu dan hari libur nasional)</p>
-                    <a href="./Yes.html"><button class="btn btn-warning">Cek Biaya</button></a>
-                </div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-4 bg-layanan">
-                    <img src="./Assets/icon/packet.png" alt="">
-                    <h1>REG</h1>
-                    <p>REGULER adalah layanan pengiriman ke seluruh wilayah Indonesia, waktu penyampaian kiriman 1-7 hari kerja,</p>
-                    <a href="./Reg.html"><button class="btn btn-warning">Cek Biaya</button></a>
-                </div>
+                <?php foreach (lihatLayanan('aktif') as $dataLayanan) : ?>
+                    <div class="col-lg-4 bg-layanan">
+                        <img src="images/layanan/<?= $dataLayanan['icon'] ?>" alt="">
+                        <h1><?= $dataLayanan['layanan'] ?></h1>
+                        <p><?= $dataLayanan['keterangan'] ?></p>
+                        <a href="<?= $dataLayanan['link'] ?>"><button class="btn btn-warning">Cek Biaya</button></a>
+                    </div>
+                <?php endforeach ?>
             </div>
         </div>
     </section>

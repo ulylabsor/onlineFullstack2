@@ -1,5 +1,5 @@
 <h3>Data Users
-   <a href="?page=add-layanan." class="btn btn-outline-info float-right"><i class="fa fa-plus"></i> Tambah Data</a>
+   <a href="?page=add-layanan" class="btn btn-outline-info float-right"><i class="fa fa-plus"></i> Tambah Data</a>
 </h3>
 <?php tampilNotif() ?>
 <table class="table table-striped">
@@ -26,7 +26,7 @@
             <td><?= $data['link'] ?></td>
             <td><?= $data['status_layanan'] ?></td>
             <td>
-               <a href="?page=edit-ayanan&id=<?= $data['id_layanan'] ?>" title="Ubah data"><i class="fa fa-edit text-info"></i></a> &nbsp;
+               <a href="?page=edit-layanan&id=<?= $data['id_layanan'] ?>" title="Ubah data"><i class="fa fa-edit text-info"></i></a> &nbsp;
 
                <a href="?page=aksi-layanan&delete=one&id=<?= $data['id_layanan'] ?>" title="Hapus data" onclick="return confirm('Yakin ingin menghapus data ? ')"><i class="fa fa-trash text-danger"></i></a>
             </td>

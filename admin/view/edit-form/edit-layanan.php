@@ -2,45 +2,43 @@
 $data = getLayananByIdA($_GET['id']);
 ?>
 <h3>Ubah Data Layanan</h3>
-<form action="?page=aksi-layanan" method="POST">
-   <input type="text" class="form-control" name="id_Layanan" id="id_Layanan" value="<?= $data['id_layanan'] ?>" hidden readonly>
+<form action="?page=aksi-layanan" method="POST" enctype="multipart/form-data">
+   <input type="text" class="form-control" name="idLayanan" id="idLayanan" value="<?= $data['id_layanan'] ?>" hidden readonly>
    <div class="row">
       <div class="col">
          <div class="form-group">
             <label for="layanan">Layanan</label>
-            <input type="layanan" class="form-control" name="layanan" id="layanan" aria-describedby="emailHelp" value="<?= $data['email'] ?>">
+            <input type="text" class="form-control" name="layanan" id="layanan" aria-describedby="emailHelp" value="<?= $data['layanan'] ?>">
             <small id="emailHelp" class="form-text text-muted">Masukkan Tipe Layanan.</small>
+         </div>
+         <div class="form-group">
+            <label for="icon">Icon</label>
+            <input type="file" class="form-control" name="icon" id="icon" value="<?= $data['icon'] ?>">
+         </div>
+         <div class="form-group">
+            <label for="link">Link</label>
+            <input type="text" class="form-control" name="link" id="link" value="<?= $data['link'] ?>">
          </div>
       </div>
       <div class="col">
          <div class="form-group">
             <label for="keterangan">Keterangan</label>
-            <input type="keterangan" name="keterangan" class="form-control" id="keterangan">
-            <small id="emailHelp" class="form-text text-muted">Lama Jasa Kirim</small>
+            <textarea class="form-control" name="keterangan" id="keterangan" rows="2"></textarea>
          </div>
+         <img src="../images/layanan/<?= $data['icon'] ?>" width="150">
       </div>
    </div>
    <div class="row">
       <div class="col">
          <div class="form-group">
-            <input type="checkbox" id="icon" name="icon" <?= $data['icon'] == 'Y' ? 'checked' : '' ?>>
+            <input type="checkbox" id="status" name="status" <?= $data['status_layanan'] == 'aktif' ? 'checked' : '' ?>>
             <label for="status">Aktif</label>
-         </div>
-      </div>
-      <div class="col">
-         <div class="form-group">
-            <label for="level">Level</label>
-            <select name="level" id="level" name="level" class="form-control">
-               <option value="customer" <?= $data['level'] == 'customer' ? 'selected' : '' ?>>Customer</option>
-               <option value="kurir" <?= $data['level'] == 'kurir' ? 'selected' : '' ?>>Kurir</option>
-               <option value="admin" <?= $data['level'] == 'admin' ? 'selected' : '' ?>>Admin</option>
-            </select>
          </div>
       </div>
    </div>
 
    <center>
-      <button type="submit" class="btn btn-primary" name="update-users" style="width: 50%;">Simpan Perubahan</button>
-      <a href="?page=users" class="btn btn-danger">Batal</a>
+      <button type="submit" class="btn btn-primary" name="update-layanan" style="width: 50%;">Simpan Perubahan</button>
+      <a href="?page=layanan" class="btn btn-danger">Batal</a>
    </center>
 </form>

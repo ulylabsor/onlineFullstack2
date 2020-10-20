@@ -1,5 +1,5 @@
 <h3>Tambah Data Layanan</h3>
-<form action="?page=aksi-layanan" method="POST">
+<form action="?page=aksi-layanan" method="POST" enctype="multipart/form-data">
    <div class="row">
       <div class="col">
          <div class="form-group">
@@ -25,7 +25,7 @@
       <div class="col">
          <div class="form-group">
             <label for="icon">Icon</label>
-            <input type="text" class="form-control" name="icon" id="icon">
+            <input type="file" class="form-control" name="icon" id="icon">
          </div>
       </div>
    </div>
@@ -43,7 +43,7 @@
    </div>
 
    <center>
-      <button type="submit" class="btn btn-primary" name="save-users" style="width: 50%;">Simpan</button>
-      <a href="?page=users" class="btn btn-danger">Batal</a>
+      <button type="submit" class="btn btn-primary" name="save-layanan" style="width: 50%;">Simpan</button>
+      <a href="?page=layanan" class="btn btn-danger">Batal</a>
    </center>
 </form>
